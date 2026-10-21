@@ -218,3 +218,23 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# =============================================================
+# SDR & GNU Radio (Comunicações Digitais)
+# =============================================================
+# Ficheiros de cópia de segurança do GNU Radio Companion
+*.grc~
+
+# Gravações de amostras I/Q e capturas de rádio (ficheiros pesados)
+*.dat
+*.bin
+*.raw
+*.cfile
+*.fc32
+*.sc16
+*.pcap
+*.pcapng
+
+# Pastas locais onde guardam os sinais descarregados
+data/
+recordings/
