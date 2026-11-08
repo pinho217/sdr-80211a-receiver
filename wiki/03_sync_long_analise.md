@@ -71,3 +71,20 @@ aplicada ao sinal atrasado. A saída também remove o intervalo que não
 pertence ao preâmbulo/dados: copia os primeiros 128 samples a partir do
 início e, depois, rejeita os 16 samples de prefixo de cada símbolo de 80.
 
+O valor do atraso pode ser alterado, mas tem de ser escolhido em função da
+janela de procura. Se for reduzido para menos de 160 samples, essa janela fica
+menor do que a duração do preâmbulo longo (8 us, ou 160 samples a 20 MHz) e
+pode deixar de observar as duas cópias do LTS. Nesse caso, os dois picos
+necessários à estimativa do CFO não são encontrados de forma fiável.
+
+Se for aumentado excessivamente, o custo é uma latência e uma utilização de
+memória desnecessárias. Além disso, uma janela de busca demasiado longa pode
+abranger o payload de dados, introduzindo picos de correlação falsos e
+prejudicando a deteção do início da trama. Portanto, aumentar o atraso não
+melhora indefinidamente a sincronização.
+
+O atraso do bloco **Delay** no GRC tem de ser estritamente igual ao parâmetro
+`SYNC_LENGTH` passado ao bloco C++. Se estes valores ficarem dessincronizados,
+`in_delayed` deixa de corresponder à mesma posição temporal analisada pelo
+FIR; o bloco copia o início do sinal a partir do ponto errado e as amostras
+entregues às FFTs ficam corrompidas.
