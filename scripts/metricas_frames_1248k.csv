@@ -1,0 +1,2 @@
+pdu_index,timestamp,encoding,rate_mbps,modulation,psdu_bytes,n_sym,points_used,points_dropped,assoc,evm_rms,snr_evm_db,snr_ls_db,cfo_khz,frame_type,receiver,transmitter,sequence,retry,ssid,note
+0,1794955906.339251,4,24,16QAM,14,2,96,0,exact,0.110840,19.106,28.220,23.35,ctrl:ack,c4:6e:1f:25:d8:15,,-1,0,,
