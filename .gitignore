@@ -5,3 +5,14 @@ wifi_phy_hier*
 __pycache__/
 *.pyc
 /tmp/*
+*.pcap
+log_*.txt
+info_repo.txt
+frames_1248k.bin
+frames_all.txt
+resumo_metricas.txt
+documento_transferencia_projeto.md
+para_enviar_claude/
+temp_figures/
+scripts/metricas_frames_1248k_mp40.csv
+scripts/metricas_selftest.csv
