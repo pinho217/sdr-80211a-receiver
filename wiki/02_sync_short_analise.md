@@ -1,6 +1,6 @@
 # Análise do OFDM Sync Short (Week 2)
 
-Fonte analisada: [`gr-ieee802-11/lib/sync_short.cc`](../gr-ieee802-11/lib/sync_short.cc) (commit `ad0598e`;
+Fonte analisada: `gr-ieee802-11/lib/sync_short.cc` (commit `ad0598e`;
 as linhas citadas são desse ficheiro). O cálculo do coeficiente de correlação está descrito em
 [01_parametros_ofdm.md](01_parametros_ofdm.md) §5. Os números desta página vêm de um porte em Python
 do bloco (`scripts/sdr80211.py`), conferido com os blocos reais (o CFO medido pelo porte, 23,4 kHz,

@@ -14,7 +14,7 @@ Vector*" pertence à Week 4 (§5 de [`03_sync_long_alinhamento.md`](03_sync_long
 ## 0. Onde este bloco fica no fluxo
 
 `sync_long` (sem CP) → `Stream to Vector (64)` → `FFT 64` → **`frame_equalizer`** → `decode_mac`.
-No [`wifi_phy_hier.py`](../wifi_phy_hier.py) a FFT é `fft.fft_vcc(64, True, window.rectangular(64), True, 1)`:
+No `wifi_phy_hier.py` a FFT é `fft.fft_vcc(64, True, window.rectangular(64), True, 1)`:
 direta, janela retangular e `shift=True`, portanto o DC fica no índice 32 e
 `i − 32` é o índice de subportadora (−32…+31). O `frame_equalizer` recebe itens de
 `64 × complex` e produz itens de **48 bytes** (`frame_equalizer_impl.cc:41-42`), um por
